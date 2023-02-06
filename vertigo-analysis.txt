@@ -1,0 +1,412 @@
+Mutation testing report:
+Number of mutations:    37
+Killed:                 26 / 37
+
+Mutations:
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/MyToken.sol
+    Line nr: 10
+    Result: Killed
+    Original line:
+                 _mint(_to, _amount * 10**18);
+
+    Mutated line:
+                 _mint(_to, _amount / 10**18);
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/MyToken.sol
+    Line nr: 10
+    Result: Killed
+    Original line:
+                 _mint(_to, _amount * 10**18);
+
+    Mutated line:
+                 
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/MyToken.sol
+    Line nr: 7
+    Result: Equivalent
+    Original line:
+             constructor() ERC20("MyToken", "MTK") {}
+
+    Mutated line:
+             constructor()  {}
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/MyToken.sol
+    Line nr: 9
+    Result: Killed
+    Original line:
+             function mintTokens(address _to, uint256 _amount) public onlyOwner {
+
+    Mutated line:
+             function mintTokens(address _to, uint256 _amount) public  {
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/MyNft.sol
+    Line nr: 10
+    Result: Killed
+    Original line:
+                 _safeMint(to, tokenId);
+
+    Mutated line:
+                 
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/MyNft.sol
+    Line nr: 7
+    Result: Equivalent
+    Original line:
+             constructor() ERC721("MyNFT", "MNFT") {}
+
+    Mutated line:
+             constructor()  {}
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/MyNft.sol
+    Line nr: 9
+    Result: Killed
+    Original line:
+             function safeMint(address to, uint256 tokenId) external onlyOwner {
+
+    Mutated line:
+             function safeMint(address to, uint256 tokenId) external  {
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 43
+    Result: Killed
+    Original line:
+                 lastClaim[from] = userLastClaim == 0
+
+    Mutated line:
+                 lastClaim[from] = userLastClaim != 0
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 52
+    Result: Killed
+    Original line:
+                     originalOwner[tokenId] == msg.sender,
+
+    Mutated line:
+                     originalOwner[tokenId] != msg.sender,
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 61
+    Result: Killed
+    Original line:
+                     if (tokenId == st[i].tokenId) {
+
+    Mutated line:
+                     if (tokenId != st[i].tokenId) {
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 60
+    Result: Lived
+    Original line:
+                 for (uint256 i = 0; i < st.length; i++) {
+
+    Mutated line:
+                 for (uint256 i = 0; i <= st.length; i++) {
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 87
+    Result: Killed
+    Original line:
+                 require(rewards > 0, "No rewards for claiming");
+
+    Mutated line:
+                 require(rewards >= 0, "No rewards for claiming");
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 106
+    Result: Killed
+    Original line:
+                 for (uint256 i = 0; i < st.length; i++) {
+
+    Mutated line:
+                 for (uint256 i = 0; i <= st.length; i++) {
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 116
+    Result: Lived
+    Original line:
+                     if (_tokenId == st[i].tokenId) {
+
+    Mutated line:
+                     if (_tokenId != st[i].tokenId) {
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 115
+    Result: Lived
+    Original line:
+                 for (uint256 i = 0; i < st.length; i++) {
+
+    Mutated line:
+                 for (uint256 i = 0; i <= st.length; i++) {
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 138
+    Result: Killed
+    Original line:
+                 for (uint256 i = 0; i < stakerBalance; i++) {
+
+    Mutated line:
+                 for (uint256 i = 0; i <= stakerBalance; i++) {
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 153
+    Result: Lived
+    Original line:
+                 _lastClaimedTimestamp = _lastClaimedTimestamp < _stakedTimestamp
+
+    Mutated line:
+                 _lastClaimedTimestamp = _lastClaimedTimestamp <= _stakedTimestamp
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 43
+    Result: Killed
+    Original line:
+                 lastClaim[from] = userLastClaim == 0
+
+    Mutated line:
+                 lastClaim[from] = userLastClaim != 0
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 52
+    Result: Killed
+    Original line:
+                     originalOwner[tokenId] == msg.sender,
+
+    Mutated line:
+                     originalOwner[tokenId] != msg.sender,
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 61
+    Result: Killed
+    Original line:
+                     if (tokenId == st[i].tokenId) {
+
+    Mutated line:
+                     if (tokenId != st[i].tokenId) {
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 60
+    Result: Killed
+    Original line:
+                 for (uint256 i = 0; i < st.length; i++) {
+
+    Mutated line:
+                 for (uint256 i = 0; i >= st.length; i++) {
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 82
+    Result: Killed
+    Original line:
+                     (block.timestamp - lastClaim[msg.sender]) >= REWARD_PERIOD,
+
+    Mutated line:
+                     (block.timestamp - lastClaim[msg.sender]) < REWARD_PERIOD,
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 87
+    Result: Killed
+    Original line:
+                 require(rewards > 0, "No rewards for claiming");
+
+    Mutated line:
+                 require(rewards <= 0, "No rewards for claiming");
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 106
+    Result: Killed
+    Original line:
+                 for (uint256 i = 0; i < st.length; i++) {
+
+    Mutated line:
+                 for (uint256 i = 0; i >= st.length; i++) {
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 116
+    Result: Lived
+    Original line:
+                     if (_tokenId == st[i].tokenId) {
+
+    Mutated line:
+                     if (_tokenId != st[i].tokenId) {
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 115
+    Result: Lived
+    Original line:
+                 for (uint256 i = 0; i < st.length; i++) {
+
+    Mutated line:
+                 for (uint256 i = 0; i >= st.length; i++) {
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 138
+    Result: Killed
+    Original line:
+                 for (uint256 i = 0; i < stakerBalance; i++) {
+
+    Mutated line:
+                 for (uint256 i = 0; i >= stakerBalance; i++) {
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 153
+    Result: Lived
+    Original line:
+                 _lastClaimedTimestamp = _lastClaimedTimestamp < _stakedTimestamp
+
+    Mutated line:
+                 _lastClaimedTimestamp = _lastClaimedTimestamp >= _stakedTimestamp
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 82
+    Result: Killed
+    Original line:
+                     (block.timestamp - lastClaim[msg.sender]) >= REWARD_PERIOD,
+
+    Mutated line:
+                     (block.timestamp + lastClaim[msg.sender]) >= REWARD_PERIOD,
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 117
+    Result: Killed
+    Original line:
+                         st[i] = st[st.length - 1];
+
+    Mutated line:
+                         st[i] = st[st.length + 1];
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 156
+    Result: Killed
+    Original line:
+                 uint256 unclaimedTime = _currentTimestamp - _lastClaimedTimestamp;
+
+    Mutated line:
+                 uint256 unclaimedTime = _currentTimestamp + _lastClaimedTimestamp;
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 157
+    Result: Killed
+    Original line:
+                 tokenRewards = (unclaimedTime * TOKENS_PER_NFT) / REWARD_PERIOD;
+
+    Mutated line:
+                 tokenRewards = (unclaimedTime * TOKENS_PER_NFT) * REWARD_PERIOD;
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 157
+    Result: Killed
+    Original line:
+                 tokenRewards = (unclaimedTime * TOKENS_PER_NFT) / REWARD_PERIOD;
+
+    Mutated line:
+                 tokenRewards = (unclaimedTime / TOKENS_PER_NFT) / REWARD_PERIOD;
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 73
+    Result: Killed
+    Original line:
+                 userRewards[msg.sender] += tokenRewardsForUnstakedNFT;
+
+    Mutated line:
+                 userRewards[msg.sender] -= tokenRewardsForUnstakedNFT;
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 127
+    Result: Lived
+    Original line:
+                 tokenRewards += userRewards[_staker];
+
+    Mutated line:
+                 tokenRewards -= userRewards[_staker];
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 139
+    Result: Killed
+    Original line:
+                     result += _calculateTokenRewards(
+
+    Mutated line:
+                     result -= _calculateTokenRewards(
+
+
+Mutation:
+    File: /home/dime/Desktop/rareskills-nft-staking-tests/contracts/NftStaker.sol
+    Line nr: 75
+    Result: Lived
+    Original line:
+                 _removeNFTFromStaker(st, tokenId);
+
+    Mutated line:
+                 
+
+
